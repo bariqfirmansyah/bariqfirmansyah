@@ -1,5 +1,6 @@
 body{
   margin: 0px;
+  position:
 }
 
 h1{
@@ -9,12 +10,15 @@ h1{
 }
 
 #title{
-  background-image: url(../images/o.jpg);
-  background-repeat: no-repeat;
+  background-image: url(../images/o2.jpg);
   margin: 0;
   padding: 0;
   text-align: center;
   background-size: cover;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.75);
 }
 
 .fixed-top.scrolled {
@@ -40,7 +44,7 @@ h1{
 #about{
   padding: 10% 0 10% 0;
   text-align: center;
-  background-color: #94d2e6;
+  background-color: #13abc4;
   color:white;
   line-height: 2;
 }
@@ -55,7 +59,7 @@ h1{
 }
 
 #projects{
-  background-color: #c1224f;
+  background-color: #94d2e6;
   padding: 5% 0 5% 0;
   text-align: center;
   line-height: 2;
@@ -82,16 +86,16 @@ h1{
 }
 
 #experiences{
-  background: linear-gradient(55deg, #4E75B9 30%, #5CBF98 90%);
+  background-color: #13abc4;
   text-align: center;
   padding: 5% 0 10% 0;
 }
 
 .timeline {
-  width: 100%;
+  width: 80%;
   max-width: 800px;
   background: #fff;
-  padding: 100px 50px;
+  padding: 100px 20px;
   position: relative;
   margin: auto;
   margin-top: 30px;
