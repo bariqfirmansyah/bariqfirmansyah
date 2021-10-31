@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="fa-events-icons-ready">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Bariq Firmansyah</title>
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="files/bootstrap.min.css">
+  <link rel="stylesheet" href="files/styles-simon.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <style>
+    .permanent-marker {
+    font-family: 'Permanent Marker', cursive;
+    }
+    .lato {
+      font-family: 'Lato', sans-serif;
+    }
+    .text-link {
+      text-decoration: underline;
+      color: black;
+    }
+
+    .text-link-clicked {
+      font-weight: bold;
+      font-style: italic;
+      text-decoration: none;
+    }
+    .icon-link {
+      color: black;
+      text-decoration: none;
+      margin-right: 5px;
+    }
+    a:hover {
+        color: #801F31;
+    }
+    a.icon-link:hover {
+        text-decoration: none;
+    }
+    p {
+      font-family: 'Lato', sans-serif;
+      text-align: left;
+    }
+    h1 {
+      font-size: 500%;
+    }
+    .vertical-center {
+        min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+        min-height: 100vh; /* These two lines are counted as one :-)       */
+
+      display: flex;
+      align-items: center;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".content .tab_content").hide();
+      $(".content .tab_1").show();
+
+      $(".li_tab").click(function(){
+        
+        $(".tab").removeClass("text-link-clicked");
+        
+        var current_tab = $(this).attr("data-list");
+        var current_a =  $(this).attr("a-list");
+        $(".content .tab_content").hide();
+        $("."+current_tab).show();
+        $("."+current_a).addClass("text-link-clicked");
+      })
+
+      $(".simon").click(function(){
+        $(".tab").removeClass("text-link-clicked");
+        
+        $(".tab_1, .tab_2, .tab_3").hide();
+        $(".tab_x").toggle();
+      })
+
+    });
+  </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+              <br><br> 
+              <div align="center">
+                <img class="row simon" data-list="tab_x" src="files/me.JPG" style="width:80%;height:80%;">
+              </div>
+              <div class="row" align="center">
+                <h2>Bariq Firmansyah</h2>
+                <a class="text-link" href="mailto://bariqsufif@gmail.com">Email</a> | <a class="text-link" href="https://www.linkedin.com/in/bariq-firmansyah/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a class="text-link" href="https://www.flickr.com/photos/189758964@N02/albums" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+              </div>
+              <div class="row tabs" text-align="left">
+                <br>
+                <ul>
+                  <li data-list="tab_1" a-list="a1" class="li_tab"><a class="text-link tab a1 text-link-clicked">Bio</a></li>
+                  <li data-list="tab_2" a-list="a2" class="li_tab"><a class="text-link tab a2">Experience</a></li>
+                  <li data-list="tab_3" a-list="a3" class="li_tab"><a class="text-link tab a3">Publication</a></li>
+                  <li><a class="text-link" href="files/2021-08_BariqFirmansyah.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-8 content">
+              <br><br>
+               <div class="tab_content tab_1">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </div>
+              <div class="tab_content tab_2">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+              </div>
+              <div class="tab_content tab_3">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+              </div>
+              <div class="tab_content tab_x" align="center">
+                <h1 id="level-title">Press <span class="notnot">'Play'</span> to Start</h1>
+                <div class="row">
+                  <div type="button" class="not">Play</div>
+                </div>
+                <div lass="row">
+                  <div type="button" id="green" class="btn green">
+                  </div>
+                  <div type="button" id="red" class="btn red">
+                  </div>
+                </div>
+                <div class="row">
+                  <div type="button" id="yellow" class="btn yellow">
+                  </div>
+                  <div type="button" id="blue" class="btn blue">
+                  </div>
+                </div>
+                <div class="row">
+                  <div type="button" id="Highscore">Highscore:</div>
+                </div>
+                <div class="row" align="left">
+                  <p>...How to play:</p>
+                  <ol>
+                    <li>Click <span class="notnot">'Play'<span></li>
+                    <li>Level 1: Simon will give the first signal. Repeat the signal by pressing the same color button</li>
+                    <li>Level 2: Simon will give <strong>only</strong> the second signal. Repeat the <strong>first signal and second signal</strong>, make sure you memorize the first signal</li>
+                    <li>Level n: Simon will give <strong>only</strong> the n-th signal. Repeat the <strong>first signal to n-th signal</strong>, make sure you memorize the first signal to the (n-1)th signal</li>
+                  </ol>
+                </div>
+              </div>
+             </div>              
+            
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="files/game.js" charset="utf-8"></script>
+</body>
+</html>
